@@ -21,7 +21,12 @@
 				}
 			out.println("<br>");
 		}
-		
+		for(int k=p;k>=0;k--){
+			for(int j=k;j>=0;j--){
+				out.print("* ");
+				}
+			out.println("<br>");
+		}
 	%>
 		
 </body>
