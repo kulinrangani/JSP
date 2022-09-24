@@ -10,7 +10,7 @@
 	ResultSet rs=stmt.executeQuery("select * from STUDENT");  
 	while(rs.next())
 	{
-		out.print(rs.getString(1)+"  "+rs.getString(2)+" ");  
+		 out.print(rs.getString(1)+"  "+rs.getString(2)+" ");  
 	}  
 	con.close(); 
 %>
