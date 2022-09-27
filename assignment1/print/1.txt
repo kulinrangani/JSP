@@ -1,0 +1,57 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+1.JSP program calculates factorial values for an integer number, while the input is taken 
+from an HTML form
+***************************************************************************************************
+p1.html
+***************************************************************************************************
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        demo
+    </title>
+</head>
+
+<body align="center">
+    <form action="p1.jsp">
+        Enter the value to find factorial: <input type="text" name="txtFact">
+        <input type="submit" value="GetFactorial" name="btnsubmit">
+    </form>
+</body>
+
+</html>
+***************************************************************************************************
+p1.jsp
+***************************************************************************************************
+<html>
+
+<body>
+    <%! 
+		String s;
+		int n,result;
+		int getFactorial(int i){
+		if(i==0)
+			return 1; 
+		else
+			return i*getFactorial(i-1); 
+			 
+	
+	} 
+	%>
+		
+	<% 
+		s=request.getParameter("txtFact");
+		n= Integer.parseInt(s);
+		result=getFactorial(n); 
+	%>
+	<h2>
+		Factorial is: 
+	</h2>
+	<%= result %>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+7. Create a JSP page that should have the background as given by user in URL. If the user 
+does not give any color, then the page should have the background color as given by user 
+lastly.
+(i.e. if URL= http://localhost:8080/my page.jsp?color=red then the page open 
+with red color as background)
+***************************************************************************************************
+p7.jsp
+***************************************************************************************************
+<html>
+<body>
+	<%
+	if (request.getParameter("color") != null){%>
+		<body bgcolor="<%= request.getParameter("color")  %>">
+	<%}
+	else{%>
+		<body bgcolor="white">	
+	<%}%>		
+</body>
+</html>

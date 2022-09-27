@@ -1,0 +1,106 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+13. Create an application that displays the count of number of times any of the page has been 
+accessed by the user. Make atleast 4 different JSP pages.If the user enter the URL of any 
+jsp page for the first time It shows the message-“Welcome You have visited this page for 
+the first time” and next time when user enter the same URL it show the message 
+showing no.of times this JSP page has been visited.
+***************************************************************************************************
+p13.jsp
+***************************************************************************************************
+<%@ page import="java.io.*,java.util.*" %>
+<html>
+<body align="center">
+<%! 
+	int count=0;;
+%>
+
+<%	
+	if( count == 0){
+		out.println("Welcome You have visited this page for the first time");
+		count =1;
+	}		
+	else {
+		out.println("Total no. of visite is " + count);
+		count ++;
+	}
+	application.setAttribute("hitCounter",count);
+%>
+
+</body>
+</html>
+***************************************************************************************************
+p13.1.jsp
+***************************************************************************************************
+<%@ page import="java.io.*,java.util.*" %>
+<html>
+<body align="center">
+<%! 
+	int count=0;;
+%>
+
+<%	
+	if( count == 0){
+		out.println("Welcome You have visited this page for the first time");
+		count =1;
+	}		
+	else {
+		out.println("Total no. of visite is " + count);
+		count ++;
+	}
+	application.setAttribute("hitCounter",count);
+%>
+
+</body>
+</html>
+***************************************************************************************************
+p13.2.jsp
+***************************************************************************************************
+<%@ page import="java.io.*,java.util.*" %>
+<html>
+<body align="center">
+<%! 
+	int count=0;;
+%>
+
+<%	
+	if( count == 0){
+		out.println("Welcome You have visited this page for the first time");
+		count =1;
+	}		
+	else {
+		out.println("Total no. of visite is " + count);
+		count ++;
+	}
+	application.setAttribute("hitCounter",count);
+%>
+
+</body>
+</html>
+***************************************************************************************************
+p13.3.jsp
+***************************************************************************************************
+<%@ page import="java.io.*,java.util.*" %>
+<html>
+<body align="center">
+<%! 
+	int count=0;;
+%>
+
+<%	
+	if( count == 0){
+		out.println("Welcome You have visited this page for the first time");
+		count =1;
+	}		
+	else {
+		out.println("Total no. of visite is " + count);
+		count ++;
+	}
+	application.setAttribute("hitCounter",count);
+%>
+
+</body>
+</html>

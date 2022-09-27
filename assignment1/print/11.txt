@@ -1,0 +1,31 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+11. Develop any Jsp application using the pre-defined variables.(Show how we can use predefined
+ variables in JSP )
+***************************************************************************************************
+p11.jsp
+***************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body align="center">
+    <% out.print("Good Morning "); %> 
+    <% response.setContentType("text/html"); %>
+    <% 
+        String name = "";
+        if(name == "")
+        {
+            session.setAttribute(name,"Kulin Rangani");
+        }
+            out.print(session.getAttribute(name));
+    
+    %>
+</body>
+</html>

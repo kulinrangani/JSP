@@ -1,0 +1,37 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+1.JDBC connection crud
+***************************************************************************************************
+JDBC.jsp
+***************************************************************************************************
+<html>
+<head>
+	<title>Fisrt jsp page </title>
+</head>
+<body>
+		<%@ page import="java.sql.*" %>
+		<%	
+		Class.forName("com.mysql.jdbc.Driver");
+		String url = "jdbc:mysql://localhost:3307/kulin";
+		String userName = "root";
+		String passWord = "abc123";
+	
+		String single_query = "insert into student values(32,'kulin',50)";
+		String Query = "insert into student values(29,'brijesh',40),(06,'kuldeep',30)";
+		
+		String delete_query = "delete from student where sid=29";
+		
+	
+		Connection con = DriverManager.getConnection(url,userName,passWord);
+		
+		Statement st = con.createStatement();
+		st.executeUpdate(single_query);	
+		st.executeUpdate(Query);
+		st.executeUpdate(delete_query);
+			
+		%>
+</body>
+</html>

@@ -1,0 +1,47 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+12. Generate 10 random number in the range of 1-10 and print it in the first column of 
+table.If the number generated is even the second column should display-Even Number 
+else Odd number. (Display it in Excel)
+***************************************************************************************************
+p12.jsp
+***************************************************************************************************
+<%@ page import="java.util.Random" %>
+
+<html>
+<body align="center">
+
+<table align="center" border="1">
+<th>Odd</th><th>Even</th>
+<%!
+	Random r=new Random();
+	int no;
+ %>
+<% 
+		response.setContentType("application/vnd.ms-exel");
+		response.setHeader("Content-Disposition","inline;filename=oddeven.xls");
+%>
+
+<% for(int i=1;i<=10;i++) {
+	no=r.nextInt(10) + 1;
+%>
+	
+
+<tr>
+	<td>
+	<% if(no % 2 != 0) {%>
+	<%= no %>
+	</td>
+	<% }
+	else { %>
+	<td>
+	<%= no %>
+	</td>
+	<% } %>
+</tr>
+<% } %>
+</body>
+</html>

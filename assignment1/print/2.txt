@@ -1,0 +1,58 @@
+Name:Rangani Kulin Hasmukhbhai
+RollNO: 32
+MCA=3
+Subject:JSP
+***************************************************************************************************
+2. JSP program shows the Fibonacci series up to a particular term, while the input is taken 
+from an HTML form.
+***************************************************************************************************
+p2.html
+***************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fibonacci</title>
+</head>
+
+<body align="center">
+  <form action="p2.jsp" method="post">
+    <label for="inputnumber">Enter number</label>
+    <input type="text" name="input_number" id="input_number" autofocus />
+    <button type="submit">Submit</button>
+  </form>
+
+
+</body>
+
+</html>
+***************************************************************************************************
+p2.jsp
+***************************************************************************************************
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci</title>
+    <style>
+      td {
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body align="center">
+    <% long num = Integer.parseInt(request.getParameter("input_number")); %>
+    <table border="2">
+      <% long i,n1=0,n2=1,sum=0; for(i=0;i<=num;i++) { %>
+      <tr>
+        <td><% out.print(n1); %></td>
+      </tr>
+      <% sum=n1+n2; n1=n2; n2=sum; } %>
+    </table>
+  </body>
+</html>
