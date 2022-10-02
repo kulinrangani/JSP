@@ -9,9 +9,16 @@
 	Random r=new Random();
 	int no;
  %>
+<% 
+		response.setContentType("application/vnd.ms-exel");
+		response.setHeader("Content-Disposition","inline;filename=oddeven.xls");
+%>
+
 <% for(int i=1;i<=10;i++) {
 	no=r.nextInt(10) + 1;
-	%>
+%>
+	
+
 <tr>
 	<td>
 	<% if(no % 2 != 0) {%>

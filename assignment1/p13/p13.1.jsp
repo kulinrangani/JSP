@@ -2,12 +2,12 @@
 <html>
 <body align="center">
 <%! 
-	int count=0;
+	int count=0;;
 %>
 
 <%	
 	if( count == 0){
-		out.println("Welcome to webpage YOU ARE FIRST VISITER");
+		out.println("Welcome You have visited this page for the first time");
 		count =1;
 	}		
 	else {
@@ -16,5 +16,6 @@
 	}
 	application.setAttribute("hitCounter",count);
 %>
+
 </body>
 </html>
